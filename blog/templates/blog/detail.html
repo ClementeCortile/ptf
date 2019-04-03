@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Test</title>
+    <title>{{ blog.title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -46,7 +46,7 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="https://www.linkedin.com/in/clemcort/">Linkedin</a>
                 <a class="nav-item nav-link active" href="">Resume</a>
-                <a class="nav-item nav-link active" href="#">Blog</a>
+                <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
             </div>
         </div>
     </nav>
@@ -54,20 +54,16 @@
 
 <main role="main">
     <div class="container">
-        <h1 class="text-center pt-3">Welcome to Placeholder</h1>
+        <h1 class="text-center pt-3">{{ blog.title }}</h1>
         <br/>
         <br/>
-        <h2>Latest Posts</h2>
+        <h2>{{ blog.pub_date_pretty }}</h2>
         <hr/>
-        {{  blog }}
-        {% for blog in blogs.all %}
-            <img src="{{ blog.image.url }}" height=100 width=300/> <br>
-            <h7>{{ blog.pub_date_pretty }}</h7>
-            <a href = '{% url 'detail' blog.id %}'><h4>{{ blog.title }}</h4> </a>
-            {{ blog.summary }}
+            <center><img src="{{ blog.image.url }}" /></center><br>
+            <h7></h7>
+            {{ blog.body }}
             <br/>
             <hr/>
-        {% endfor %}
 
     </div>
 </main>
