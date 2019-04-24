@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.urls import path
 
-from presentations import models
+from . import views
 
-def allpresentations(request):
-    presentations = models.Presentations.objects
-    return render(request, 'presentations/presentations.html', {'presentations': presentations})
+urlpatterns = [
+    path('', views.allpresentations, name='allpresentations'),
+]
 

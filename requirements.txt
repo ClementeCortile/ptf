@@ -25,3 +25,4 @@ qtconsole==4.4.3
 terminado==0.8.1
 traitlets==4.3.2
 widgetsnbextension==3.4.2
+django-easy-pdf>=0.2.0
