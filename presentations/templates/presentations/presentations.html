@@ -55,23 +55,29 @@
         </div>
     </nav>
 </header>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-sm align-self-left">
-            <embed src="{% static 'w2v_cv.png' %}" , type="application/pdf" width="200%" height="800px"/>
 
-        </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
+<main role="main">
+    <div class="container">
+        <h1 class="text-center pt-3">Presentations</h1>
+        <br/>
+        <br/>
+        <h3> </h3>
+        <hr/>
+        {% for presentation in presentation.all %}
+            <a href='{% url 'presentationsdetail' presentation.id %}'><h4>{{ presentation.title }}</h4></a>
+            <br>
+            <div class="row">
+            <div class="col"><img src="{{ presentation.image.url }}" height=100 width=300/>
+            </div>
+            <div class="col align-left">{{ presentation.body }}</div>
+            </div>
+
+            <br/>
+            <hr/>
+        {% endfor %}
+
     </div>
-</div>
-
-
+</main>
 
 </body>
 </html>

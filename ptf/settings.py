@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'projects.apps.ProjectsConfig',
     'works.apps.WorksConfig',
     'presentations.apps.PresentationsConfig',
-    'easy_pdf.apps.EasyPDFConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

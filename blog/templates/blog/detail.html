@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -45,9 +46,11 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="https://www.linkedin.com/in/clemcort/">Linkedin</a>
-                <a class="nav-item nav-link active" href="">Resume</a>
+                <a class="nav-item nav-link active" href="{% static 'cv_clemente.pdf' %}">Resume</a>
                 <a class="nav-item nav-link active" href="https://github.com/ClementeCortile">GitHub</a>
-                <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Portfolio</a>
+                <a class="nav-item nav-link active" href="{% url 'allprojects' %}">Projects</a>
+                <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Works</a>
+                <a class="nav-item nav-link active" href="{% url 'allpresentations' %}">Presentations</a>
             </div>
         </div>
     </nav>
