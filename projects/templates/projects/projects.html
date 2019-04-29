@@ -55,7 +55,24 @@
         </div>
     </nav>
 </header>
-<body>
+
+<main role="main">
+    <div class="container">
+        <h1 class="text-center pt-3">Welcome to Placeholder</h1>
+        <br/>
+    <hr/>
+        {% for projects in projects.all %}
+                <h2 class="text-center pt-3">{{ projects.title }}</h2> <br> <br>
+                <img style="horiz-align:middle" src="{{ projects.image.url }}" height=100 width=500/>
+            <br>
+            <hr/>
+
+            {% endfor %}
+
+    </div>
+
+
+</main>
 
 </body>
 </html>
