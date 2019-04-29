@@ -84,7 +84,7 @@
 
     <div class="album py-5 bg-light">
         <div class="container">
-            <left><h1><a href="#">Projects</a></h1></left>
+            <left><h1><a href="{% url 'allprojects' %}">Projects</a></h1></left>
             <div class="row">
                 {% for projects in projects.all %}
                     <div class="col-md-4">

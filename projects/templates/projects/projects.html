@@ -58,12 +58,15 @@
 
 <main role="main">
     <div class="container">
-        <h1 class="text-center pt-3">Welcome to Placeholder</h1>
+        <h1 class="text-center pt-3">Projects</h1>
         <br/>
     <hr/>
         {% for projects in projects.all %}
-                <h2 class="text-center pt-3">{{ projects.title }}</h2> <br> <br>
-                <img style="horiz-align:middle" src="{{ projects.image.url }}" height=100 width=500/>
+            <h2 class="text-center pt-3">{{ projects.title }}</h2> <br>
+            <center>Available at:
+                <a href="http://datacareer.propulsion-home.ch/">http://datacareer.propulsion-home.ch/</a> <br>
+            <img src="{{ projects.image.url }}" style="max-height: 600px; max-width: 1200px;">
+            </center>
             <br>
             <hr/>
 
