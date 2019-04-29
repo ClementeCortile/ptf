@@ -71,6 +71,8 @@
                 document.write('<embed src="{% static 'Time Use during recession.pdf' %}" , type="application/pdf" width="100%" height="800px"/>');
             }else if ({{ presentations.id }} == 4) {
                 document.write('<embed src="{% static 'Monetary  policy.pdf' %}" , type="application/pdf" width="100%" height="800px"/>');
+            }else if ({{ presentations.id }} == 5) {
+                document.write('<embed src="{% static 'WPA Report - Parametric Methods.pdf' %}" , type="application/pdf" width="100%" height="800px"/>');
             }else {
                 alert('File Not Loaded');
             }
