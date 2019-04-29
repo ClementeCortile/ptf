@@ -9,3 +9,6 @@ def home(request):
     projects = models.Projects.objects
     return render(request, 'jobs/home.html', {'jobs': jobs,
                                               'projects': projects})
+
+def musicchallange(request):
+    return render(request, 'blog/MusicChallange.html')
