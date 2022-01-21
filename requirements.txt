@@ -9,7 +9,7 @@ Django==2.1.7
 django-easy-pdf==0.1.1
 html5lib==1.0.1
 ipykernel==5.1.0
-ipython==7.4.0
+ipython==7.16.3
 ipywidgets==7.4.2
 Jinja2==2.10
 jsonschema==3.0.1
